@@ -1,0 +1,184 @@
+/* Resetting default browser styles to maintain consistency across devices */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Defining CSS variables for consistent theming across the site */
+:root {
+    --primary-color: #dbc581; /* A golden tone to reflect sophistication */
+    --secondary-color: #ffc107; /* Bright accent color for visual appeal */
+    --text-color: #261f1f; /* Dark text color for readability */
+    --hover-color: #e64a19; /* Vibrant hover color for interactivity */
+}
+
+/* Applying a clean and modern font and ensuring readability */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6; /* Comfortable line height for longer text */
+}
+
+/* Styling the header with a gradient for visual depth */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+header img.logo {
+    width: 150px; /* Logo size optimized for visibility */
+}
+
+/* Horizontal navigation with spacing for readability */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+/* Navigation images styled as interactive buttons */
+nav ul li img {
+    width: 60px;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth animations */
+}
+
+nav ul li img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Highlight hover state */
+}
+
+/* Main section styled with a gradient background and central alignment */
+main {
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, #f9f9f9, #e6e6e6); /* Subtle gradient for depth */
+    min-height: calc(100vh - 140px); /* Full viewport minus header/footer */
+}
+
+/* Main headings with strong emphasis */
+main h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Adds a modern touch */
+}
+
+/* Paragraph styling for readability */
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555; /* Softer color for secondary text */
+}
+
+/* Styling the car details section with a card-like appearance */
+.car-details {
+    margin: 20px auto;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    animation: fadeIn 1s; /* Smooth fade-in effect */
+}
+
+.car-details img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.car-details .price {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.car-details button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth color transition */
+}
+
+car-details button:hover {
+    background: var(--hover-color); /* Highlight button hover state */
+}
+
+/* Specifications section styled as a grid for modernity */
+.specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adaptive grid */
+    gap: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffefd5; /* Light pastel background for separation */
+    border-radius: 10px;
+}
+
+.specs div {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.specs div strong {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Footer with consistent branding */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--text-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Fade-in animation for engaging transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive design for mobile users */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .car-details {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .specs {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .specs div {
+        margin-bottom: 10px;
+    }
+}
